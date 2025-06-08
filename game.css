@@ -1,0 +1,65 @@
+body{
+    background-color: #3C3C3C;
+    display: flex;
+    justify-content: center;
+}
+.flame{
+    border: 2px solid #000000;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+.border{
+    border: 2px solid #000000;
+}
+.item{
+    line-height: 150px;
+}
+.prompt{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.win{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+.nought{
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 150px;
+    color: 	#FF2D2D;
+    text-align: center
+}
+.cross{
+    font-size: 100px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 150px;
+    color: 	#6A6AFF;
+    text-align: center;
+}
+.nought_prompt{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    color: 	#FF2D2D;
+    line-height: 30px;
+    text-align: center
+}
+.cross_prompt{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Microsoft JhengHei", sans-serif;
+    color: 	#6A6AFF;
+    line-height: 30px;
+    text-align: center;
+}

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Flower Shop Modify</title>
+        <link rel="stylesheet" type="text/css" href="flower_modify.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    </head>
+    
+    <body id="body">
+
+        <!--the banner of the website-->
+        <div class="ban" id="ban">
+            <img class="mobile-menu" src="https://image1.gamme.com.tw/news2/2020/23/34/qJeRpp_WmKGWrqc.jpg" onclick="show_mobile_menu();"/>
+            <div class="mark">Flower</div>
+            <div class="function">
+                <div class="option" id="home" onmouseover="over_home();" onmouseout="out_home();" onclick="click_home();">Home</div>
+                <div class="option" id="about" onmouseover="over_about();" onmouseout="out_about();" onclick="click_about();">About</div>
+                <div class="option" id="product" onmouseover="over_product();" onmouseout="out_product();" onclick="click_product();">Products</div>
+                <div class="option" id="review" onmouseover="over_review();" onmouseout="out_review();" onclick="click_review();">Review</div>
+                <div class="option" id="contact" onmouseover="over_contact();" onmouseout="out_contact();" onclick="click_contact();">Contact</div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-heart" style="padding: 8px; color: #272727" id="heart" onmouseover="over_heart();" onmouseout="out_heart();"></i>
+                <i class="fa-solid fa-cart-shopping" style="padding: 8px; color: #272727" id="cart" onmouseover="over_cart();" onmouseout="out_cart();"></i>
+                <i class="fa-solid fa-user" style="padding: 8px; color: #272727" id="user" onmouseover="over_user();" onmouseout="out_user();"></i>
+            </div>
+        </div>
+        <!--the mobile menu of the web-->
+        <div class="mobile-menu-frame">
+            <div class="mobile-menu-option" id="mobile-menu-option">
+                <div class="mobile-option" id="option-1" onmouseover="over_mobile_home();" onmouseout="out_mobile_home();" onclick="click_home();">Home</div>
+                <div class="mobile-option" id="option-2" onmouseover="over_mobile_about();" onmouseout="out_mobile_about();" onclick="click_about();">About</div>
+                <div class="mobile-option" id="option-3" onmouseover="over_mobile_product();" onmouseout="out_mobile_product();" onclick="click_product();">Products</div>
+                <div class="mobile-option" id="option-4" onmouseover="over_mobile_review();" onmouseout="out_mobile_review();" onclick="click_review();">Review</div>
+                <div class="mobile-option" id="option-5" onmouseover="over_mobile_contact();" onmouseout="out_mobile_contact();" onclick="click_contact();">Contact</div>
+            </div>
+        </div>
+
+        <!--the content in the home page-->
+        <div class="word-box" id="word-box">
+            <div class="title-1" id="title-1">Fresh Flowers</div>
+            <div class="title-2" id="title-2">Natural & Beautiful Flowers</div>
+            <div class="content" id="content">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+        </div>
+        <div class="shop" id="shop" onmouseover="over_shop();" onmouseout="out_shop();">Shop Now</div>
+        
+        <!--the content in the "about us" page-->
+        <div class="about" id="about-us"> 
+            <div class="alone-us"> <span class="alone-about">About </span> Us </div>
+        </div>
+        <div class="picture-frame" id="picture-frame">
+            <img class="picture" id="picture" src="https://s.widget-club.com/images/YyiR86zpwIMIfrCZoSs4ulVD9RF3/c241de82f86b57b6115f72a5f0ce1950/3b81ed5960aaa0aca4df661d98e8d6c2.jpg?q=70&w=500"/>
+            <div class="word-in-picture" id="word-in-picture">Best Flower Sellers</div>
+            <div class="word-box-beside-picture">
+                <div class="title-beside-picture">Why Choose Us</div>
+                <div class="word-beside-picture-1">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+                <div class="word-beside-picture-2">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+                <div class="learn" id="learn" onmouseover="over_learn();" onmouseout="out_learn();">Learn More</div>
+            </div>
+        </div>
+
+        <!--the content in the product page-->
+        <div class="product" id="least-product"> 
+            <div class="alone-product"> <span class="alone-least">Least </span> Products </div>
+        </div>
+        <div class="product-frame" id="product-frame-1">
+            <div class="flower" onmouseover="over_flower_1();" onmouseout="out_flower_1();">
+                <div class="product-picture">
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_AMOUR-Rose-Bouquet_HLB002_occasions_%E7%B4%85%E7%8E%AB%E7%91%B0_%E7%B2%89%E7%B4%85.jpg"/>    
+                    <div class="buy" id="buy-1">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-1" onmouseover="over_heart_product_1();" onmouseout="out_heart_product_1();"></i>
+                        <div class="add-in-cart" id="add-cart-1" onmouseover="over_add_cart_1();" onmouseout="out_add_cart_1();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-1" onmouseover="over_share_1();" onmouseout="out_share_1();"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="flower" onmouseover="over_flower_2();" onmouseout="out_flower_2();">
+                <div class="product-picture">    
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_LEXA-Tulip-Bouquet_HLB004_occasions_white_orange_%E9%AC%B1%E9%87%91%E9%A6%99%E8%8A%B1%E6%9D%9F-768x768.jpg"/>
+                    <div class="buy" id="buy-2">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-2" onmouseover="over_heart_product_2();" onmouseout="out_heart_product_2();"></i>
+                        <div class="add-in-cart" id="add-cart-2" onmouseover="over_add_cart_2();" onmouseout="out_add_cart_2();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-2" onmouseover="over_share_2();" onmouseout="out_share_2();"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="flower" onmouseover="over_flower_3();" onmouseout="out_flower_3();">
+                <div class="product-picture"> 
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_RONNIE-Lily-Bouquet_HLB006_occasions_white_%E7%99%BE%E5%90%88%E8%8A%B1.jpg"/>
+                    <div class="buy" id="buy-3">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-3" onmouseover="over_heart_product_3();" onmouseout="out_heart_product_3();"></i>
+                        <div class="add-in-cart" id="add-cart-3" onmouseover="over_add_cart_3();" onmouseout="out_add_cart_3();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-3" onmouseover="over_share_3();" onmouseout="out_share_3();"></i>
+                    </div>
+                </div>    
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>   
+            <div class="flower" onmouseover="over_flower_4();" onmouseout="out_flower_4();">
+                <div class="product-picture">    
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_KYRA-Phalaenopsis-Bouquet_HLB016_occasions_%E8%9D%B4%E8%9D%B6%E8%98%AD%E8%8A%B1.jpg"/>    
+                    <div class="buy" id="buy-4">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-4" onmouseover="over_heart_product_4();" onmouseout="out_heart_product_4();"></i>
+                        <div class="add-in-cart" id="add-cart-4" onmouseover="over_add_cart_4();" onmouseout="out_add_cart_4();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-4" onmouseover="over_share_4();" onmouseout="out_share_4();"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="flower" onmouseover="over_flower_5();" onmouseout="out_flower_5();">
+                <div class="product-picture">
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_PAREILA-Peony-Bouquet_HLB007_occasions_%E7%B2%89%E7%B4%AB%E7%89%A1%E4%B8%B9.jpg"/>
+                    <div class="buy" id="buy-5">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-5" onmouseover="over_heart_product_5();" onmouseout="out_heart_product_5();"></i>
+                        <div class="add-in-cart" id="add-cart-5" onmouseover="over_add_cart_5();" onmouseout="out_add_cart_5();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-5" onmouseover="over_share_5();" onmouseout="out_share_5();"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+            <div class="flower" onmouseover="over_flower_6();" onmouseout="out_flower_6();">
+                <div class="product-picture">
+                    <img class="item" src="https://haloflowers.com.hk/wp-content/uploads/2022/07/HALO-Flowers_MAYA-Mini-Rose-Bouquet_HLB003_occasions_%E8%BF%B7%E4%BD%A0%E7%B4%85%E7%8E%AB%E7%91%B0.jpg"/>
+                    <div class="buy" id="buy-6">
+                        <i class="fa-solid fa-heart" style="padding: 8px; color: #FFFFFF" id="heart-product-6" onmouseover="over_heart_product_6();" onmouseout="out_heart_product_6();"></i>
+                        <div class="add-in-cart" id="add-cart-6" onmouseover="over_add_cart_6();" onmouseout="out_add_cart_6();">Add To Cart</div>
+                        <i class="fa-solid fa-share" style="padding: 8px; color: #FFFFFF" id="share-6" onmouseover="over_share_6();" onmouseout="out_share_6();"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="name">Flower Pot</div>
+                    <div class="price">$15.99</div>
+                </div>
+            </div>
+        </div>
+
+        <!--the content in the review page-->
+        <div class="review" id="customer-review"> 
+            <div class="alone-review"> <span class="alone-customer">Customer's </span> Review </div>
+        </div>
+        <div class="review-frame" id="review-frame">
+            <div class="review-below">
+                <div class="satisfaction">
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-left: 20px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                </div>
+                <div class="review-content">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+                <div class="customer">    
+                    <img class="customer-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPAEGNILM8eg7jxCzwEmNbTfK2kZ641aesGyh2Y7WEuO1EbYxRWyX9Sk5v3Ia_0F7eJ-8&usqp=CAU"/>
+                    <div class="customer-information">
+                        <div class="review-customer-name">John Deo</div>
+                        <div class="review-customer-who">Happy Customer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-below">
+                <div class="satisfaction">
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-left: 20px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                </div>
+                <div class="review-content">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+                <div class="customer">    
+                    <img class="customer-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8y7YAECekBLyVTt7Oss7x5JHs-8WmkVKJq2BnUfwgQAnyumaoEudfWjGzjTi-gXkUYnc&usqp=CAU"/>
+                    <div class="customer-information">
+                        <div class="review-customer-name">John Deo</div>
+                        <div class="review-customer-who">Happy Customer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-below">
+                <div class="satisfaction">
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-left: 20px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                    <i class="fa-solid fa-star" style="font-size: 30px; padding-right: 2px; padding-top: 20px; padding-bottom: 10px; color: #FF60AF"></i>
+                </div>
+                <div class="review-content">Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...Rose, Tulip, are native to Central Asia, Carnation, Known to symbolise love and deep fascination, Lily, Daisy, a great symbol of happiness, Camellia, symbolise love and affection...</div>
+                <div class="customer">    
+                    <img class="customer-picture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN9NVBIOk_blWPFbW7lJfwX3FNO6jMIsDdZg&s"/>
+                    <div class="customer-information">
+                        <div class="review-customer-name">John Deo</div>
+                        <div class="review-customer-who">Happy Customer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--the content in the contact page-->
+        <div class="contact" id="contact-us"> 
+            <div class="alone-us-con"> <span class="alone-contact">Contact </span> Us </div>
+        </div>
+        <form action="/test.aspx" method="post">
+            <div class="contact-content" id="contact-content">
+                <div class="input-frame" id="input-frame">
+                    <input class="input" id="input-name" type="text" placeholder="name">
+                    <input class="input" id="input-email" type="email" placeholder="email">
+                    <input class="input" id="input-num" type="number" placeholder="number">
+                    <input class="input-ms" id="input-ms" type="text" placeholder="message">
+                    <div class="send" id="send" onmouseover="over_send();" onmouseout="out_send();">Send Message</div>
+                </div>
+                <img class="water-flower" src="https://img.soundofhope.org/2022-10/watering-2389940_1280_fotor-1666220416520.jpg"/>
+            </div>    
+
+        <script>
+            let times = 0; // a counter to record the times that the menu button is clicked
+            
+            let div_elem_body = document.querySelector("#body");
+
+            let div_elem_ban = document.querySelector("#ban");
+
+            let div_elem_shop = document.querySelector("#shop");
+
+            let div_elem_home = document.querySelector("#home");
+            let div_elem_about = document.querySelector("#about");
+            let div_elem_product = document.querySelector("#product");
+            let div_elem_review = document.querySelector("#review");
+            let div_elem_contact = document.querySelector("#contact");
+
+            let div_elem_heart = document.querySelector("#heart");
+            let div_elem_cart = document.querySelector("#cart");
+            let div_elem_user = document.querySelector("#user");
+
+            let div_elem_word_box = document.querySelector("#word-box");
+            let div_elem_title_1 = document.querySelector("#title-1");
+            let div_elem_title_2 = document.querySelector("#title-2");
+            let div_elem_content = document.querySelector("#content");
+
+            let div_elem_about_us = document.querySelector("#about-us");
+            let div_elem_picture_frame = document.querySelector("#picture-frame");
+            let div_elem_learn = document.querySelector("#learn");
+
+            let div_elem_least_product = document.querySelector("#least-product");
+            let div_elem_product_frame_1 = document.querySelector("#product-frame-1");
+            
+
+            let div_elem_buy_1 = document.querySelector("#buy-1");
+            let div_elem_buy_2 = document.querySelector("#buy-2");
+            let div_elem_buy_3 = document.querySelector("#buy-3");
+            let div_elem_buy_4 = document.querySelector("#buy-4");
+            let div_elem_buy_5 = document.querySelector("#buy-5");
+            let div_elem_buy_6 = document.querySelector("#buy-6");
+
+            let div_elem_heart_product_1 = document.querySelector("#heart-product-1");
+            let div_elem_add_cart_1 = document.querySelector("#add-cart-1");
+            let div_elem_share_1 = document.querySelector("#share-1");
+            let div_elem_heart_product_2 = document.querySelector("#heart-product-2");
+            let div_elem_add_cart_2 = document.querySelector("#add-cart-2");
+            let div_elem_share_2 = document.querySelector("#share-2");
+            let div_elem_heart_product_3 = document.querySelector("#heart-product-3");
+            let div_elem_add_cart_3 = document.querySelector("#add-cart-3");
+            let div_elem_share_3 = document.querySelector("#share-3");
+            let div_elem_heart_product_4 = document.querySelector("#heart-product-4");
+            let div_elem_add_cart_4 = document.querySelector("#add-cart-4");
+            let div_elem_share_4 = document.querySelector("#share-4");
+            let div_elem_heart_product_5 = document.querySelector("#heart-product-5");
+            let div_elem_add_cart_5 = document.querySelector("#add-cart-5");
+            let div_elem_share_5 = document.querySelector("#share-5");
+            let div_elem_heart_product_6 = document.querySelector("#heart-product-6");
+            let div_elem_add_cart_6 = document.querySelector("#add-cart-6");
+            let div_elem_share_6 = document.querySelector("#share-6");
+
+            let div_elem_customer_review = document.querySelector("#customer-review");
+            let div_elem_review_frame = document.querySelector("#review-frame");
+
+            let div_elem_contact_us = document.querySelector("#contact-us");
+            let div_elem_contact_content = document.querySelector("#contact-content");
+
+            let div_elem_send = document.querySelector("#send");
+
+            let div_elem_mobile_menu_option = document.querySelector("#mobile-menu-option");
+
+            let div_elem_option_1 = document.querySelector("#option-1");
+            let div_elem_option_2 = document.querySelector("#option-2");
+            let div_elem_option_3 = document.querySelector("#option-3");
+            let div_elem_option_4 = document.querySelector("#option-4");
+            let div_elem_option_5 = document.querySelector("#option-5");
+
+
+            function over_shop(){
+                div_elem_shop.style.background = "#FF79BC";
+            }
+            function out_shop(){
+                div_elem_shop.style.background = "#272727"
+            }
+
+            function over_home(){
+                div_elem_home.style.color = "#FF79BC";
+            }
+            function out_home(){
+                div_elem_home.style.color = "#8E8E8E"
+            }
+
+            function over_about(){
+                div_elem_about.style.color = "#FF79BC";
+            }
+            function out_about(){
+                div_elem_about.style.color = "#8E8E8E"
+            }
+
+            function over_product(){
+                div_elem_product.style.color = "#FF79BC";
+            }
+            function out_product(){
+                div_elem_product.style.color = "#8E8E8E"
+            }
+
+            function over_review(){
+                div_elem_review.style.color = "#FF79BC";
+            }
+            function out_review(){
+                div_elem_review.style.color = "#8E8E8E"
+            }
+
+            function over_contact(){
+                div_elem_contact.style.color = "#FF79BC";
+            }
+            function out_contact(){
+                div_elem_contact.style.color = "#8E8E8E"
+            }
+
+            function over_heart(){
+                div_elem_heart.style.color = "#FF79BC";
+            }
+            function out_heart(){
+                div_elem_heart.style.color = "#272727"
+            }
+
+            function over_cart(){
+                div_elem_cart.style.color = "#FF79BC";
+            }
+            function out_cart(){
+                div_elem_cart.style.color = "#272727"
+            }
+
+            function over_user(){
+                div_elem_user.style.color = "#FF79BC";
+            }
+            function out_user(){
+                div_elem_user.style.color = "#272727"
+            }
+
+            function click_about(){
+                div_elem_body.style.background = "#FFFFFF";
+                div_elem_title_1.style.display = "none";
+                div_elem_title_2.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_shop.style.display = "none";
+
+                div_elem_word_box.style.marginTop = "0";
+
+                div_elem_about_us.style.display = "flex";
+                div_elem_about_us.style.marginTop = "110px";
+
+                div_elem_picture_frame.style.display = "flex"; 
+                
+                div_elem_least_product.style.display = "none";
+                div_elem_product_frame_1.style.display = "none";
+                
+
+                div_elem_customer_review.style.display = "none";
+                div_elem_review_frame.style.display = "none";
+
+                div_elem_contact_us.style.display = "none";
+                div_elem_contact_content.style.display = "none";
+            }
+
+            function over_learn(){
+                div_elem_learn.style.background = "#FF79BC";
+            }
+            function out_learn(){
+                div_elem_learn.style.background = "#272727"
+            }
+
+            function click_home(){
+                div_elem_body.style.background = "url(https://i.pinimg.com/1200x/cc/46/13/cc4613355370333926666c9c4cd05d39.jpg)";
+                div_elem_body.style.backgroundSize = "cover";
+                div_elem_title_1.style.display = "block";
+                div_elem_title_2.style.display = "block";
+                div_elem_content.style.display = "block";
+                div_elem_shop.style.display = "block";
+                div_elem_word_box.style.marginTop = "15%";
+
+                div_elem_about_us.style.display = "none";
+                div_elem_about_us.style.marginTop = "0";
+                div_elem_picture_frame.style.display = "none";    
+
+                div_elem_least_product.style.display = "none";
+                div_elem_product_frame_1.style.display = "none";
+                
+
+                div_elem_customer_review.style.display = "none";
+                div_elem_review_frame.style.display = "none";
+
+                div_elem_contact_us.style.display = "none";
+                div_elem_contact_content.style.display = "none";
+            }
+
+            function click_product(){
+                div_elem_body.style.background = "#FFFFFF";
+                div_elem_title_1.style.display = "none";
+                div_elem_title_2.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_shop.style.display = "none";
+
+                div_elem_about_us.style.display = "none";
+                div_elem_picture_frame.style.display = "none";
+
+                div_elem_word_box.style.marginTop = "0";
+                div_elem_least_product.style.display = "flex";
+                div_elem_least_product.style.marginTop = "110px";
+                div_elem_product_frame_1.style.display = "grid";
+                
+
+                div_elem_customer_review.style.display = "none";
+                div_elem_review_frame.style.display = "none";
+
+                div_elem_contact_us.style.display = "none";
+                div_elem_contact_content.style.display = "none";
+            }
+
+            function over_flower_1(){
+                div_elem_buy_1.style.display = "flex";
+            }
+            function out_flower_1(){
+                div_elem_buy_1.style.display = "none";
+            }
+
+            function over_flower_2(){
+                div_elem_buy_2.style.display = "flex";
+            }
+            function out_flower_2(){
+                div_elem_buy_2.style.display = "none";
+            }
+
+            function over_flower_3(){
+                div_elem_buy_3.style.display = "flex";
+            }
+            function out_flower_3(){
+                div_elem_buy_3.style.display = "none";
+            }
+
+            function over_flower_4(){
+                div_elem_buy_4.style.display = "flex";
+            }
+            function out_flower_4(){
+                div_elem_buy_4.style.display = "none";
+            }
+
+            function over_flower_5(){
+                div_elem_buy_5.style.display = "flex";
+            }
+            function out_flower_5(){
+                div_elem_buy_5.style.display = "none";
+            }
+
+            function over_flower_6(){
+                div_elem_buy_6.style.display = "flex";
+            }
+            function out_flower_6(){
+                div_elem_buy_6.style.display = "none";
+            }
+            
+            function over_heart_product_1(){
+                div_elem_heart_product_1.style.color = "#272727";
+            }
+            function out_heart_product_1(){
+                div_elem_heart_product_1.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_1(){
+                div_elem_add_cart_1.style.color = "#272727";
+            }
+            function out_add_cart_1(){
+                div_elem_add_cart_1.style.color = "#FFFFFF";
+            }
+
+            function over_share_1(){
+                div_elem_share_1.style.color = "#272727";
+            }
+            function out_share_1(){
+                div_elem_share_1.style.color = "#FFFFFF";
+            }
+
+            function over_heart_product_2(){
+                div_elem_heart_product_2.style.color = "#272727";
+            }
+            function out_heart_product_2(){
+                div_elem_heart_product_2.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_2(){
+                div_elem_add_cart_2.style.color = "#272727";
+            }
+            function out_add_cart_2(){
+                div_elem_add_cart_2.style.color = "#FFFFFF";
+            }
+
+            function over_share_2(){
+                div_elem_share_2.style.color = "#272727";
+            }
+            function out_share_2(){
+                div_elem_share_2.style.color = "#FFFFFF";
+            }
+
+            function over_heart_product_3(){
+                div_elem_heart_product_3.style.color = "#272727";
+            }
+            function out_heart_product_3(){
+                div_elem_heart_product_3.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_3(){
+                div_elem_add_cart_3.style.color = "#272727";
+            }
+            function out_add_cart_3(){
+                div_elem_add_cart_3.style.color = "#FFFFFF";
+            }
+
+            function over_share_3(){
+                div_elem_share_3.style.color = "#272727";
+            }
+            function out_share_3(){
+                div_elem_share_3.style.color = "#FFFFFF";
+            }
+
+            function over_heart_product_4(){
+                div_elem_heart_product_4.style.color = "#272727";
+            }
+            function out_heart_product_4(){
+                div_elem_heart_product_4.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_4(){
+                div_elem_add_cart_4.style.color = "#272727";
+            }
+            function out_add_cart_4(){
+                div_elem_add_cart_4.style.color = "#FFFFFF";
+            }
+
+            function over_share_4(){
+                div_elem_share_4.style.color = "#272727";
+            }
+            function out_share_4(){
+                div_elem_share_4.style.color = "#FFFFFF";
+            }
+
+            function over_heart_product_5(){
+                div_elem_heart_product_5.style.color = "#272727";
+            }
+            function out_heart_product_5(){
+                div_elem_heart_product_5.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_5(){
+                div_elem_add_cart_5.style.color = "#272727";
+            }
+            function out_add_cart_5(){
+                div_elem_add_cart_5.style.color = "#FFFFFF";
+            }
+
+            function over_share_5(){
+                div_elem_share_5.style.color = "#272727";
+            }
+            function out_share_5(){
+                div_elem_share_5.style.color = "#FFFFFF";
+            }
+
+            function over_heart_product_6(){
+                div_elem_heart_product_6.style.color = "#272727";
+            }
+            function out_heart_product_6(){
+                div_elem_heart_product_6.style.color = "#FFFFFF";
+            }
+
+            function over_add_cart_6(){
+                div_elem_add_cart_6.style.color = "#272727";
+            }
+            function out_add_cart_6(){
+                div_elem_add_cart_6.style.color = "#FFFFFF";
+            }
+
+            function over_share_6(){
+                div_elem_share_6.style.color = "#272727";
+            }
+            function out_share_6(){
+                div_elem_share_6.style.color = "#FFFFFF";
+            }
+
+            function click_review(){
+                div_elem_body.style.background = "#FFFFFF";
+                div_elem_title_1.style.display = "none";
+                div_elem_title_2.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_shop.style.display = "none";
+
+                div_elem_about_us.style.display = "none";
+                div_elem_picture_frame.style.display = "none";
+
+                
+                div_elem_least_product.style.display = "none";
+                div_elem_product_frame_1.style.display = "none";
+                
+
+                div_elem_word_box.style.marginTop = "0";
+                div_elem_customer_review.style.display = "flex";
+                div_elem_customer_review.style.marginTop = "110px";
+                div_elem_review_frame.style.display = "flex";
+
+                div_elem_contact_us.style.display = "none";
+                div_elem_contact_content.style.display = "none";
+            }
+
+            function click_contact(){
+                div_elem_body.style.background = "#FFFFFF";
+                div_elem_title_1.style.display = "none";
+                div_elem_title_2.style.display = "none";
+                div_elem_content.style.display = "none";
+                div_elem_shop.style.display = "none";
+
+                div_elem_about_us.style.display = "none";
+                div_elem_picture_frame.style.display = "none";
+
+                div_elem_least_product.style.display = "none";
+                div_elem_product_frame_1.style.display = "none";
+                
+
+                div_elem_customer_review.style.display = "none";
+                div_elem_review_frame.style.display = "none";
+
+                div_elem_word_box.style.marginTop = "0";
+                div_elem_contact_us.style.display = "flex";
+                div_elem_contact_us.style.marginTop = "110px";
+                div_elem_contact_content.style.display = "flex";
+            }
+
+            function over_send(){
+                div_elem_send.style.background = "#FF79BC";
+            }
+            function out_send(){
+                div_elem_send.style.background = "#272727"
+            }
+
+            function show_mobile_menu(){
+                times ++;
+                console.log(times);
+                
+                if(times % 2 == 1){
+                    div_elem_mobile_menu_option.style.display = "block";
+                    div_elem_ban.style.boxShadow = "0 0 0 0 #FFFFFF";
+                }else{
+                    div_elem_mobile_menu_option.style.display = "none";
+                    div_elem_ban.style.boxShadow = "5px 5px 5px 5px #0005";
+                }
+            }
+
+            function over_mobile_home(){
+                div_elem_option_1.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_home(){
+                div_elem_option_1.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_about(){
+                div_elem_option_2.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_about(){
+                div_elem_option_2.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_product(){
+                div_elem_option_3.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_product(){
+                div_elem_option_3.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_review(){
+                div_elem_option_4.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_review(){
+                div_elem_option_4.style.border = "1px #8E8E8E solid";
+            }
+
+            function over_mobile_contact(){
+                div_elem_option_5.style.border = "1px #FF60AF solid";
+            }
+            function out_mobile_contact(){
+                div_elem_option_5.style.border = "1px #8E8E8E solid";
+            }
+        </script>
+    </body>
+    
+</html>

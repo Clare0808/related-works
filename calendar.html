@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>Vue Calendar</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link rel="stylesheet" type="text/css" href="C:\Users\User\Documents\Self_Practice\Vue\practice\calendar.css"/>
+    </head>
+    <body>
+        <div id="calendar">
+            <div class="flame">
+                <div class="week-flame">
+                    <div class="week" v-for="week in weeks">{{week}}</div>
+                </div>
+                <hr/>
+                <div class="day_flame" >
+                    <div class="day" 
+                         v-for="i in 31" 
+                         @click="day_click(i)" 
+                         :class="{click : i === selected, nonclick : i !== selected, todo : works[i] && works[i].length > 0, non_todo : works[i] && works[i].length === 0}"
+                         :key="i"
+                         >
+                        {{days[i]}} 
+                        <div class="lunar">{{lunar_num(lunar[i - 1])}}</div>
+                    </div>
+                </div>
+                <hr/>
+                <div class="work_flame" v-if="show">
+                    <div class="input-flame">
+                        <input class="input_work" type="text" placeholder="Add work" v-model.trim="work" @keydown.enter="add_work(selected)">
+                    </div>
+                    <div class="work_list_flame" v-for="(w, index) in works[selected]" :key="index">
+                        <div class="work">{{w}}</div>
+                        <div class="cancel" @click="cancel(selected, index)">X</div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        <script>
+            const vm = Vue.createApp({
+                data (){
+                    return {
+                        weeks: ["日", "一", "二", "三", "四", "五", "六"],
+                        days: [],
+                        chinese: ["十", "一", "二", "三", "四", "五", "六", "七", "八", "九"],
+                        minus: 6,
+                        lunar: [],
+                        clicked: false,
+                        selected: 0,
+                        current_tab: 0,
+                        works: {},
+                        work: "",
+                        show: false
+                    };
+                },
+                mounted (){
+                    for (let index = 0; index <= 31; index ++){
+                        this.days.push(index);
+                        this.lunar.push(this.minus);
+                        this.minus ++;
+                        this.works[index] = [];
+                    }
+                },
+                methods: {
+                    lunar_num (num){
+                        if (num > 30){
+                            num %= 30
+                        }
+                        if (num <= 10){
+                            return "初" + this.chinese[num % 10];
+                        }else if (num < 20){
+                            return "十" + this.chinese[num % 10];
+                        }else if (num < 30){
+                            return "廿" + this.chinese[num % 10];
+                        }else if (num == 30){
+                            return "三十";
+                        }
+                    },
+                    day_click (num){
+                        this.selected = num;
+                        this.show = true;
+                        return this.selected, this.show 
+                    },
+                    add_work (num){ 
+                        this.works[num].push(this.work);
+                        this.work = "";
+                    },
+                    cancel (works_index, work_index){
+                        this.works[works_index].splice(work_index, 1);
+                    }
+                }
+            });
+
+            vm.mount("#calendar");
+        </script>
+    </body>
+</html>

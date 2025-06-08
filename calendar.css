@@ -1,0 +1,95 @@
+body{
+    background-color: #3C3C3C;
+    display: flex;
+    justify-content: center;
+}
+.flame{
+    background-color: #FCFCFC;  
+    padding-bottom: 5px;
+}
+.week-flame{
+    display: grid;
+    grid-template-columns: repeat(7, 60px);
+    justify-content: center;
+}
+.week{
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.day_flame{
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+.day{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: 	#4F4F4F;
+    display: grid;
+    grid-template-rows: 25px 20px 5px;
+}
+.lunar{
+    font-size: 15px;
+    font-weight: none;
+}
+.todo{
+    border-bottom: 2px solid #D0D0D0;
+}
+.non_todo{
+    border-bottom: none;
+}
+.click{
+    background-color: #3C3C3C;
+    color: #FCFCFC;
+    border-radius: 100%;
+}
+.nonclick{
+    background-color: none;
+    color: #4F4F4F;
+}
+.work_flame{
+    display: block;
+}
+.non_work_flame{
+    display: none;
+}
+.input-flame{
+    display: flex;
+    justify-content: center;
+}
+.input_work{
+    flex: none;
+    width: 400px;
+    height: 50px;
+    border: 3px solid #E0E0E0;
+    margin-bottom: 10px;
+}
+.work_list_flame{
+    display: grid;
+    grid-template-columns: 330px 50px;
+    grid-template-rows: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.time{
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.work{
+    flex: none;
+    line-height: 50px;
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left:2px solid #ACD6FF;
+    background-color: #FCFCFC;  
+}
+.cancel{
+    flex: none;
+    color: 	#D0D0D0;
+    text-align: end;
+}

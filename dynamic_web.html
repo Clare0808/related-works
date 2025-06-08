@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" /> 
+        <meta charset="utf-8" /> 
+        <title>Vue Dynamic Web</title> 
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+        <link rel="stylesheet" type="text/css" href="dynamic_web.css"/> 
+    </head> 
+    
+    <body> 
+        <div id="dynamic" class="dynamic"> 
+            <div class="left" @click="prev_slide"><</div>
+            <div class="flame">
+                <div class="text">
+                    <transition :name="transition" mode="out-in">
+                        <div class="title" :class="'active'" :key="current">{{titles[current]}}</div>
+                    </transition>
+                    <transition :name="transition" mode="out-in">
+                        <div class="content" :class="'active'":key="current">{{contents[current]}}</div>
+                    </transition>
+                </div>
+                <transition :name="transition" mode="out-in">
+                    <img class="picture" :src="images[current]" :class="'active'" :key="current">
+                </transition>
+            </div>
+            <div class="right" @click="next_slide">></div>
+        </div> 
+        
+        <script> 
+            const vm = Vue.createApp({ 
+                data (){ 
+                    return { 
+                        titles: ["海象樂園", "老年學鋼琴", "搭船遊去"],
+                        contents: ["趴在冰層上的懶惰動物", "學習永遠不嫌晚!", "不會游泳只好搭船"],
+                        images: ["https://wuo-wuo.com/images/issue/similar-animals/04_sea/03.jpg", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQolIAoGzNhyrW327m0418BBa1ssGeG8HdUbw&s", "https://cdn.pixabay.com/photo/2022/10/23/13/43/canoe-7541311_1280.jpg"],
+                        current: 0,
+                        transition: "move-right"
+                    }; 
+                }, 
+                methods: { 
+                   next_slide (){
+                        this.transition = "move-right";
+                        this.current = (this.current + 1) % this.images.length;
+                   },
+                   prev_slide (){
+                        this.transition = "move-left";
+                        this.current = (this.current - 1 + this.images.length) % this.images.length;
+                    }
+                } 
+            }); 
+            
+            vm.mount("#dynamic"); 
+        </script> 
+    </body> 
+</html>

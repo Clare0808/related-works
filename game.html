@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" /> 
+        <meta charset="utf-8" /> 
+        <title>Vue Game</title> 
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+        <link rel="stylesheet" type="text/css" href="game.css"/> 
+    </head> 
+    
+    <body> 
+        <div id="game"> 
+            <div class="flame"> 
+                <div class="border" v-for="i in 9"> 
+                    <div class="item" @click="add_item(i)" :class="{nought : items[i] === 'O', cross : items[i] === 'X'}">{{items[i]}}</div> 
+                </div> 
+            </div> 
+            
+            <div class="win" v-if="items[1] !== '.' && items[1] === items[2] && items[2] === items[3]">
+                <span :class="{nought_prompt : items[1] === 'O', cross_prompt : items[1] === 'X'}">{{items[1]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[4] !== '.' && items[4] === items[5] && items[5] === items[6]">
+                <span :class="{nought_prompt : items[4] === 'O', cross_prompt : items[4] === 'X'}">{{items[4]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[7] !== '.' && items[7] === items[8] && items[8] === items[9]">
+                <span :class="{nought_prompt : items[7] === 'O', cross_prompt : items[7] === 'X'}">{{items[7]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[1] !== '.' && items[1] === items[4] && items[4] === items[7]">
+                <span :class="{nought_prompt : items[1] === 'O', cross_prompt : items[1] === 'X'}">{{items[1]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[2] !== '.' && items[2] === items[5] && items[5] === items[8]">
+                <span :class="{nought_prompt : items[2] === 'O', cross_prompt : items[2] === 'X'}">{{items[2]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[3] !== '.' && items[3] === items[6] && items[6] === items[9]">
+                <span :class="{nought_prompt : items[3] === 'O', cross_prompt : items[3] === 'X'}">{{items[3]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[1] !== '.' && items[1] === items[5] && items[5] === items[9]">
+                <span :class="{nought_prompt : items[1] === 'O', cross_prompt : items[1] === 'X'}">{{items[1]}} </span> Win !
+            </div> 
+            <div class="win" v-else-if="items[3] !== '.' && items[3] === items[5] && items[5] === items[7]">
+                <span :class="{nought_prompt : items[3] === 'O', cross_prompt : items[3] === 'X'}">{{items[3]}} </span> Win !
+            </div> 
+            <div class="prompt" v-else :class="{nought_prompt : next_prompt === 'O', cross_prompt : next_prompt === 'X'}">
+                <span class="prompt">Next : </span>{{next_prompt}}
+            </div> 
+        </div> 
+        
+        <script> 
+            let time = 1; 
+            let index = 0; 
+            
+            const vm = Vue.createApp({ 
+                data (){ 
+                    return { 
+                        items: Array(10).fill("."), 
+                        selected: [], 
+                        prompt_sign: "" 
+                    }; 
+                }, 
+                computed: { 
+                    next_prompt (){ 
+                        return this.prompt_sign 
+                    } 
+                }, 
+                methods: { 
+                    add_item (num){ 
+                        this.selected.push(num); 
+                        if (time % 2 !== 0){ 
+                            this.items[num] = "O"; 
+                            this.prompt_sign = "X"; 
+                        }else { 
+                            this.items[num] = "X"; 
+                            this.prompt_sign = "O"; 
+                        } 
+                        
+                        if (time % 4 === 0){ 
+                            this.items[this.selected[index]] = "."; 
+                            index ++; 
+                        }
+                    
+                        time ++; 
+                    }, 
+                } 
+            }); 
+            
+            vm.mount("#game"); 
+        </script> 
+    </body> 
+</html>
