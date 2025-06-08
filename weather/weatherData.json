@@ -1,0 +1,178 @@
+[
+  {
+    "city": "基隆市",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "20%"
+  },
+  {
+    "city": "臺北市",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "新北市",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "桃園市",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "新竹市",
+    "temperature": [
+      "20",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "新竹縣",
+    "temperature": [
+      "20",
+      "24"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "苗栗縣",
+    "temperature": [
+      "19",
+      "24"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "臺中市",
+    "temperature": [
+      "21",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "彰化縣",
+    "temperature": [
+      "22",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "南投縣",
+    "temperature": [
+      "21",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "雲林縣",
+    "temperature": [
+      "21",
+      "24"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "嘉義市",
+    "temperature": [
+      "21",
+      "24"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "嘉義縣",
+    "temperature": [
+      "22",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "臺南市",
+    "temperature": [
+      "24",
+      "26"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "高雄市",
+    "temperature": [
+      "24",
+      "26"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "屏東縣",
+    "temperature": [
+      "23",
+      "25"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "宜蘭縣",
+    "temperature": [
+      "19",
+      "22"
+    ],
+    "rain": "20%"
+  },
+  {
+    "city": "花蓮縣",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "20%"
+  },
+  {
+    "city": "臺東縣",
+    "temperature": [
+      "22",
+      "24"
+    ],
+    "rain": "20%"
+  },
+  {
+    "city": "澎湖縣",
+    "temperature": [
+      "23",
+      "24"
+    ],
+    "rain": "10%"
+  },
+  {
+    "city": "金門縣",
+    "temperature": [
+      "20",
+      "23"
+    ],
+    "rain": "0%"
+  },
+  {
+    "city": "連江縣",
+    "temperature": [
+      "20",
+      "22"
+    ],
+    "rain": "0%"
+  }
+]

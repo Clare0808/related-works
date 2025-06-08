@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta name="viewport" content="width-device-width, initial-scale=1.0" /> 
+        <meta charset="utf-8" /> 
+        <title>Vue Weather</title> 
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> 
+        <link rel="stylesheet" type="text/css" href="weather.css"/> 
+    </head> 
+    
+    <body> 
+        <div id="app"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="250 0 500 350">
+                <path v-for="(city, index) in pathDatas" :key="index" :d="city" @click="city_clicked(index)"></path>
+            </svg>
+            <div class="weather-info-flame">
+                <div class="weather-info">
+                    <div class="title">台灣天氣預報</div>
+                    <div class="city-name">{{current_city}}</div>
+                    <div v-if="current_city != '請選擇城市'" class="info-flame">
+                        <div class="temperature">
+                            <div class="tem-title">溫度</div>
+                            {{current_tem_low}} ~ {{current_tem_high}}
+                        </div>
+                        <div class="weather">
+                            <div class="weather-title">降雨機率</div>
+                            {{current_rain}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+        <script> 
+            const vm = Vue.createApp({ 
+                data (){ 
+                    return { 
+                        pathDatas: [],
+                        cityNames: [],
+                        current_city: "請選擇城市",
+                        temperature: [],
+                        rainRate: [],
+                        current_tem_low: "",
+                        current_tem_high: "",
+                        current_rain: ""
+                    }; 
+                }, 
+                mounted (){
+                    fetch("http://localhost:8080/data.json")
+                    .then(response => response.json()) // 解析 json
+                    .then(data => {
+                        this.pathDatas = data.map(item => item.path); // 提取所有 path
+                        this.cityNames = data.map(item => item.name);
+                    });
+                    fetch("http://localhost:8080/weatherData.json")
+                    .then(response => response.json()) // 解析 json
+                    .then(data => {
+                        this.temperature = data.map(item => item.temperature); // 提取所有 path
+                        this.rainRate = data.map(item => item.rain);
+                    });
+                },
+                methods: { 
+                   city_clicked(num){
+                        this.current_city = this.cityNames[num];
+                        this.current_tem_low = this.temperature[num][0];
+                        this.current_tem_high = this.temperature[num][1];
+                        this.current_rain = this.rainRate[num];
+                   }
+                } 
+            }); 
+            
+            vm.mount("#app"); 
+            
+        </script> 
+    </body> 
+</html>
