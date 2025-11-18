@@ -21,6 +21,10 @@
 ### web_crawler_novel3
 利用網路爬蟲自動在搜尋框輸入書名並尋找
 
+### house_price_predict
+一個簡易的房價預測網站，主要用來呈現模型預測的結果，以及房家資訊的查詢
+https://github.com/Clare0808/house_price_predict.git
+
 ### flower-shop
 一個簡易的花朵店商網站，可以使使用者下單購買、留言，而商家也可在後台觀看銷售狀況、評論等等
 https://github.com/Clare0808/flower-shop.git
