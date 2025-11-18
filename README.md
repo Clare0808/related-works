@@ -22,7 +22,7 @@
 利用網路爬蟲自動在搜尋框輸入書名並尋找
 
 ### house_price_predict
-一個簡易的房價預測網站，主要用來呈現模型預測的結果，以及房家資訊的查詢
+一個簡易的房價預測網站，主要用來呈現模型預測的結果，以及房價訊的查詢
 https://github.com/Clare0808/house_price_predict.git
 
 ### flower-shop
